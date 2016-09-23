@@ -15,7 +15,7 @@ def checkArg():
 def checkIp():
     if checkArg():
         ip = sys.argv[1]
-        p = os.popen('curl -x %s  www.baidu.com -m 5 --connect-timeout 5  -o /dev/null -s -w "%%{http_code}"' % (ip,))
+        p = os.popen('curl -x %s  www.hao123.com -m 5 --connect-timeout 5  -o /dev/null -s -w "%%{http_code}"' % (ip,))
         http_code =  int(p.read().strip())
         if 200 == http_code:
             print "%s is good" % ip 
