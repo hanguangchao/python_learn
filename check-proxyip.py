@@ -18,7 +18,7 @@ def checkIp():
         p = os.popen('curl -x %s  www.baidu.com -m 5 --connect-timeout 5  -o /dev/null -s -w "%%{http_code}"' % (ip,))
         http_code =  int(p.read().strip())
         if 200 == http_code:
-            print "% is good" % ip 
+            print "%s is good" % ip 
         else:
             print "%s is bad" % ip 
     else:
