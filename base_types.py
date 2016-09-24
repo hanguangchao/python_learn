@@ -57,6 +57,75 @@ def test_list():
 def test_tuple():
     a_tuple = ("a", 'b', "c", 'd', 'e')
     print a_tuple, a_tuple[0], a_tuple[-1], a_tuple[1:3]
+    print 'a' in a_tuple
+    print 'e' in a_tuple
+    print a_tuple.index('a')
+    print a_tuple.index('e')
+
+    v = ('a', 2, True)
+    (x, y, z) = v
+    print x, y , z 
+
+def test_set():
+    a_set = {1, 2, 3}
+    print a_set
+    print type(a_set)
+    a_set = {1, 2}
+    print a_set
+
+    a_list = [1, 2, 3, 'sss', 'ooo']
+    a_set = set(a_list)
+    print a_set
+    print a_list
+    print len(a_set)
+    print len(a_list)
+    a_set.add('eee')
+    print a_set
+    a_set.update([5, 6 , 7 , False, 'ok'])
+    print a_set
+    
+    other_set = a_set
+
+    a_set.discard('eee')
+    a_set.remove('sss')
+    print a_set
+    a_set.pop()
+    print a_set
+    print other_set
+    a_set.clear()
+    print a_set
+    print other_set
+
+    a_set = {1, 2, 'a', 'b', 'e', 'f'}
+    b_set = {'a', 'b', 'c'}
+    print a_set.union(b_set)
+    print a_set.intersection(b_set)
+    print a_set.difference(b_set)
+    
+    a_set = {1, 2, 3}
+    b_set = {1, 2, 3, 4}
+    print a_set.issubset(b_set)
+    print b_set.issuperset(a_set)
+    
+    a_set.add(5)
+    print a_set.issubset(b_set)
+    print b_set.issuperset(a_set)
+
+def test_dict():
+    a_dict = {'server': 'db.diveintopython3.org', 'database': 'mysql'}
+    print a_dict
+    a_dict['db'] = 'blog'
+    print a_dict
+ 
+    SUFFIXES = {1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+                1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']}
+    print len(SUFFIXES)
+    print 1000 in SUFFIXES
+    print SUFFIXES[1000]
+    print SUFFIXES[1024]
+    print SUFFIXES[1000][3]
+
+
 
 
 if __name__ == '__main__':
@@ -67,8 +136,12 @@ if __name__ == '__main__':
     is_it_true([])
 
     is_it_true(fractions.Fraction(1, 2))    
+    is_it_true((1, 2 , 3))
 
+    a_set = {1, 2}
+    is_it_true(a_set)
 
     test_list()
     test_tuple()
-
+    test_set()
+    test_dict()
