@@ -9,11 +9,11 @@ def test_os():
     os.chdir("/Users/han/ENV")
     print(os.getcwd())
     
-    cwdpath='/Users/han/Code/GitPro/learn-python'
+    cwdpath=os.path.curdir
     print(os.path.join(cwdpath, 'myfile.py'))
     print(os.path.expanduser('~'))
     
-    pathname='/Users/han/Code/GitPro/learn-python/1.py'
+    pathname=os.path.join(os.path.curdir, '1.py')
     print(os.path.split(pathname))
     
     (dirname, filename) = os.path.split(pathname)
