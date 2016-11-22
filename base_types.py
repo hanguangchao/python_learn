@@ -17,6 +17,22 @@ print float(1)
 print int(-1.123)
 
 
+def test_numeric():
+    x = 1231.92391931123983357
+    print x
+    """
+    制定宽度和精度
+    '[<>^]?width[,]?(.digits)?' 
+    """
+    print format(x, '0.2f')
+    print format(x, '>10.1f')
+    print format(x, '<10.6f')
+    print format(x, '^10.1f')
+    print format(x, ',')
+    print format(x, '0,.2f')
+
+    print format(x, 'e')
+    print format(x, '0.2E')
 
 def is_it_true(anything):
     if anything:
@@ -129,6 +145,7 @@ def test_dict():
 
 
 if __name__ == '__main__':
+
     is_it_true(1)
     is_it_true(-1)
     is_it_true(0) 
@@ -141,6 +158,7 @@ if __name__ == '__main__':
     a_set = {1, 2}
     is_it_true(a_set)
 
+    test_numeric();
     test_list()
     test_tuple()
     test_set()
