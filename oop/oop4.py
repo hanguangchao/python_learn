@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 class Person:
-    def __init__(self, first_name):
+    def __init__(self, name):
         self.name  = name
 
     @property

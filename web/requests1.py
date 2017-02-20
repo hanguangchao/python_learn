@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 import requests
 import sys
@@ -45,12 +45,6 @@ AGENTS = [
 
 ]
 
-
-
-
-
-
-
 def check(url):
     for ua in AGENTS:
         ua = None
@@ -77,4 +71,4 @@ def check2(url):
         time.sleep(1)
 
 if __name__ == '__main__':
-    check(sys.argv[1])
+    check2(sys.argv[1])
