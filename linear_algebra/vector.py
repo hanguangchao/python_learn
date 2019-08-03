@@ -85,3 +85,6 @@ class Vector:
         """返回向量的单位向量"""
         return Vector(self._values) / self.norm()
     
+    def dot(self, another):
+        return sum([a*b for a, b in zip(self, another)])
+    

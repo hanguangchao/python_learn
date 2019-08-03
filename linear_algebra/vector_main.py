@@ -43,3 +43,36 @@ if __name__ == "__main__":
 
     print("normalize {} is {}".format(vec2, vec2.normalize()))
     print(vec2.normalize().norm())
+    
+    
+    x = Vector([1, 1, 1])
+    y = Vector([2, 4,6])
+    print("{} + {} = {}".format(x, y, x + y))
+    
+    print("{} * {} = {}".format(4, x, 4 * x))
+    
+    print("norm({}) = {}".format(x, x.norm()))
+    
+    print("norm({}) = {}".format(y, y.norm()))
+    
+    print("normalize {} is {}".format(x, x.normalize()))
+    print(x.normalize().norm())
+    
+    
+    print("normalize {} is {}".format(y, y.normalize()))
+    print(y.normalize().norm())
+    
+    
+    v  = Vector([-0.221, 7.437])
+    print("norm({}) = {}".format(v, v.norm()))
+    print("normalize {} is {}".format(v, v.normalize()))
+    
+    v  = Vector([8.813, -1.331, -6.247])
+    print("norm({}) = {}".format(v, v.norm()))
+    print("normalize {} is {}".format(v, v.normalize()))
+    
+    x = Vector([1, 1, 1])
+    y = Vector([2, 4,6])
+    
+    print("dot({} . {}) = {}".format(x, y , x.dot(y)))
+    
